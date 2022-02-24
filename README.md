@@ -2,5 +2,5 @@
 
 | Room | Dificulty | Tags |
 | ----------- | ----------- | ----------- |
-| <a href="https://github.com/PSkora90/Writeups/blob/6e37f8a769f6d7899fdd3843476befbd446158dd/THM/Insekube/insekube.md">Insekube</a> | easy | kubectl |
+| <a href="https://github.com/PSkora90/Writeups/blob/0ad4fcdfdd9656a453a57e33101238617365e81f/THM/Insekube/insekube.md">Insekube</a> | easy | kubectl |
 
