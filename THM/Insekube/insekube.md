@@ -46,7 +46,7 @@ To get next two answers all we need to do is fllow instruction. Flag 3 is in sam
 ### Task 7
 
 First we need to prepare .yaml file
-
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -73,6 +73,7 @@ spec:
   - name: noderoot
     hostPath:
       path: /
+```
 
 
  
