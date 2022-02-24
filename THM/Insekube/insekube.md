@@ -1,3 +1,8 @@
+Insekube
+
+Exploiting Kubernetes by leveraging a Grafana LFI vulnerability
+https://tryhackme.com/room/insekube
+
 Task 1
 
 nmap -p- -Pn -sC -sT -A --reason -o nmap.scan [Target IP]
