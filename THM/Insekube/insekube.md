@@ -1,7 +1,5 @@
-Insekube
-
+<a href="https://tryhackme.com/room/insekube"> Insekube </a>
 Exploiting Kubernetes by leveraging a Grafana LFI vulnerability
-https://tryhackme.com/room/insekube
 
 Task 1
 
